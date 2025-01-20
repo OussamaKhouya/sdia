@@ -1,5 +1,9 @@
 import { Revenue } from './definitions';
 
+import nextConfig from 'next.config';
+
+export const getImageSrc = (path: string) => `${nextConfig.basePath}${path}`;
+
 export const formatCurrency = (amount: number) => {
   return (amount / 100).toLocaleString('en-US', {
     style: 'currency',
